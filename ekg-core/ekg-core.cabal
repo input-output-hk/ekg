@@ -1,20 +1,21 @@
-cabal-version:      3.0
-name:               ekg-core
-version:            0.1.2.0
-synopsis:           Tracking of system metrics
-description:        This library lets you define and track system metrics.
-homepage:           https://github.com/tibbe/ekg-core
-bug-reports:        https://github.com/tibbe/ekg-core/issues
-license:            BSD-3-Clause
-license-file:       LICENSE
-author:             Johan Tibell
+cabal-version:   3.0
+name:            ekg-core
+version:         0.1.2.0
+synopsis:        Tracking of system metrics
+description:     This library lets you define and track system metrics.
+homepage:        https://github.com/input-output-hk/ekg
+bug-reports:     https://github.com/input-output-hk/ekg/issues
+license:         BSD-3-Clause
+license-file:    LICENSE
+author:          Johan Tibell
 maintainer:
   Johan Tibell <johan.tibell@gmail.com>,
-  Mikhail Glushenkov <mikhail.glushenkov@gmail.com>
+  Mikhail Glushenkov <mikhail.glushenkov@gmail.com>,
+  operations@iohk.io
 
-category:           System
-build-type:         Simple
-extra-source-files: CHANGELOG.md
+category:        System
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
 tested-with:
   GHC ==8.4.4
    || ==8.6.5
@@ -82,4 +83,5 @@ benchmark distribution
 
 source-repository head
   type:     git
-  location: https://github.com/tibbe/ekg-core.git
+  location: https://github.com/input-output-hk/ekg.git
+  subdir:   ekg-core

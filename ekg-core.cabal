@@ -14,7 +14,7 @@ maintainer:
 
 category:           System
 build-type:         Simple
-extra-source-files: CHANGES.md
+extra-source-files: CHANGELOG.md
 tested-with:
   GHC ==8.4.4
    || ==8.6.5

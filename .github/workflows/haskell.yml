@@ -1,0 +1,56 @@
+name: CI
+
+# Limit concurrent runs of this workflow within a single PR
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  pull_request:
+  merge_group:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+       fail-fast: false
+       matrix:
+         ghc: ["8.10.7", "9.2.8", "9.6.3", "9.8.1"]
+         cabal: ["3.10.2.0"]
+         os: [ubuntu-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install base libraries
+      uses: input-output-hk/actions/base@latest
+      with:
+        use-sodium-vrf: false
+
+    - name: Install Haskell
+      uses: input-output-hk/actions/haskell@latest
+      id: setup-haskell
+      with:
+        ghc-version: ${{ matrix.ghc }}
+        cabal-version: ${{ matrix.cabal }}
+
+    - name: Configure Cabal
+      run: |
+        cp .github/workflows/cabal.project.local .
+
+    - name: Update Cabal (Hackage and CHaP)
+      run: |
+        cabal clean
+        cabal update
+
+    - name: Build dependencies
+      id: build-dependencies
+      run: cabal build --only-dependencies all -j
+
+    - name: Build project
+      run: cabal build all -j

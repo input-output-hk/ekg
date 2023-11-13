@@ -1,3 +1,8 @@
+## 0.1.2.0
+
+ * GHC 8.4-9.8 support
+   ([#1](https://github.com/input-output-hk/ekg-core/pull/1)).
+
 ## 0.1.1.7 (2019-03-15)
 
  * Fix two bugs in `cbits` relating to distribution values

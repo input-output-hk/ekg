@@ -1,1 +1,4 @@
-packages: ./
+packages:
+    ekg-core
+    ekg-json
+    ekg

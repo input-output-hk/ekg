@@ -1,4 +1,8 @@
+index-state:
+  , hackage.haskell.org 2023-11-10T00:00:00Z
+  , cardano-haskell-packages 2023-11-10T00:00:00Z
+
 packages:
-    ekg-core
-    ekg-json
-    ekg
+  ekg-core
+  ekg-json
+  ekg

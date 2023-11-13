@@ -1,4 +1,8 @@
-## 0.1.2.0
+# EKG-core Changelog
+
+# Changelog entries
+
+## 0.1.2.0 (2023-11-13)
 
  * GHC 8.4-9.8 support
    ([#1](https://github.com/input-output-hk/ekg-core/pull/1)).

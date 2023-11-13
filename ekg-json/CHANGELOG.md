@@ -1,6 +1,10 @@
-## 0.1.0.7 (2020-??-??)
+# EKG-json Changelog
 
- * TBD
+# Changelog entries
+
+## 0.1.1.0 (2023-11-13)
+
+ * GHC 9.8 support.
 
 ## 0.1.0.6 (2017-07-31)
 

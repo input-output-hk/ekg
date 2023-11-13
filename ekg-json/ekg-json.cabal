@@ -1,6 +1,6 @@
 cabal-version:   3.0
 name:            ekg-json
-version:         0.1.1.0
+version:         0.1.0.6
 license:         BSD-3-Clause
 license-file:    LICENSE
 maintainer:
@@ -42,6 +42,6 @@ library
   build-depends:
     , aeson                 ^>=2.2
     , base                  >=4.11   && <4.20
-    , ekg-core              ^>=0.1.2
+    , ekg-core              ^>= 0.1
     , text                  >=1.2.4  && <2.2
     , unordered-containers  <0.3
